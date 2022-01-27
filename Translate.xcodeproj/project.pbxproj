@@ -3,27 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AD7112C727A2C4DE004C27C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112C627A2C4DE004C27C6 /* AppDelegate.swift */; };
 		AD7112C927A2C4DE004C27C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112C827A2C4DE004C27C6 /* SceneDelegate.swift */; };
-		AD7112CB27A2C4DE004C27C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112CA27A2C4DE004C27C6 /* ViewController.swift */; };
-		AD7112CE27A2C4DE004C27C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7112CC27A2C4DE004C27C6 /* Main.storyboard */; };
+		AD7112CB27A2C4DE004C27C6 /* TabBarwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112CA27A2C4DE004C27C6 /* TabBarwController.swift */; };
 		AD7112D027A2C4DF004C27C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7112CF27A2C4DF004C27C6 /* Assets.xcassets */; };
 		AD7112D327A2C4DF004C27C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7112D127A2C4DF004C27C6 /* LaunchScreen.storyboard */; };
+		AD7112DC27A2C506004C27C6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AD7112DB27A2C506004C27C6 /* SnapKit */; };
+		AD7112DF27A2C571004C27C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AD7112DE27A2C571004C27C6 /* Alamofire */; };
+		AD7112E227A2C7EA004C27C6 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112E127A2C7EA004C27C6 /* TranslateViewController.swift */; };
+		AD7112E427A2CB05004C27C6 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112E327A2CB05004C27C6 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD7112C327A2C4DE004C27C6 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7112C627A2C4DE004C27C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD7112C827A2C4DE004C27C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD7112CA27A2C4DE004C27C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AD7112CD27A2C4DE004C27C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD7112CA27A2C4DE004C27C6 /* TabBarwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarwController.swift; sourceTree = "<group>"; };
 		AD7112CF27A2C4DF004C27C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7112D227A2C4DF004C27C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD7112D427A2C4DF004C27C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD7112E127A2C7EA004C27C6 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		AD7112E327A2CB05004C27C6 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7112DC27A2C506004C27C6 /* SnapKit in Frameworks */,
+				AD7112DF27A2C571004C27C6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,24 @@
 		AD7112C527A2C4DE004C27C6 /* Translate */ = {
 			isa = PBXGroup;
 			children = (
+				AD7112E027A2C7DD004C27C6 /* Scenes */,
 				AD7112C627A2C4DE004C27C6 /* AppDelegate.swift */,
 				AD7112C827A2C4DE004C27C6 /* SceneDelegate.swift */,
-				AD7112CA27A2C4DE004C27C6 /* ViewController.swift */,
-				AD7112CC27A2C4DE004C27C6 /* Main.storyboard */,
+				AD7112E327A2CB05004C27C6 /* UIColor+.swift */,
+				AD7112CA27A2C4DE004C27C6 /* TabBarwController.swift */,
 				AD7112CF27A2C4DF004C27C6 /* Assets.xcassets */,
 				AD7112D127A2C4DF004C27C6 /* LaunchScreen.storyboard */,
 				AD7112D427A2C4DF004C27C6 /* Info.plist */,
 			);
 			path = Translate;
+			sourceTree = "<group>";
+		};
+		AD7112E027A2C7DD004C27C6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AD7112E127A2C7EA004C27C6 /* TranslateViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +98,10 @@
 			dependencies = (
 			);
 			name = Translate;
+			packageProductDependencies = (
+				AD7112DB27A2C506004C27C6 /* SnapKit */,
+				AD7112DE27A2C571004C27C6 /* Alamofire */,
+			);
 			productName = Translate;
 			productReference = AD7112C327A2C4DE004C27C6 /* Translate.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +129,10 @@
 				Base,
 			);
 			mainGroup = AD7112BA27A2C4DE004C27C6;
+			packageReferences = (
+				AD7112DA27A2C506004C27C6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				AD7112DD27A2C571004C27C6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = AD7112C427A2C4DE004C27C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +149,6 @@
 			files = (
 				AD7112D327A2C4DF004C27C6 /* LaunchScreen.storyboard in Resources */,
 				AD7112D027A2C4DF004C27C6 /* Assets.xcassets in Resources */,
-				AD7112CE27A2C4DE004C27C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +159,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD7112CB27A2C4DE004C27C6 /* ViewController.swift in Sources */,
+				AD7112CB27A2C4DE004C27C6 /* TabBarwController.swift in Sources */,
+				AD7112E227A2C7EA004C27C6 /* TranslateViewController.swift in Sources */,
 				AD7112C727A2C4DE004C27C6 /* AppDelegate.swift in Sources */,
 				AD7112C927A2C4DE004C27C6 /* SceneDelegate.swift in Sources */,
+				AD7112E427A2CB05004C27C6 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AD7112CC27A2C4DE004C27C6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD7112CD27A2C4DE004C27C6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD7112D127A2C4DF004C27C6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,6 +357,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AD7112DA27A2C506004C27C6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		AD7112DD27A2C571004C27C6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD7112DB27A2C506004C27C6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD7112DA27A2C506004C27C6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		AD7112DE27A2C571004C27C6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD7112DD27A2C571004C27C6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AD7112BB27A2C4DE004C27C6 /* Project object */;
 }
