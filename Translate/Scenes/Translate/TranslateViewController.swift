@@ -8,28 +8,12 @@
 import UIKit
 import SnapKit
 
-enum Language {
-    case ko
-    case en
-    case ja
-    case ch
-    
-    var title: String {
-        switch self {
-        case .ko:
-            return "Korean"
-        case .en:
-            return "English"
-        case .ja:
-            return "Japanese"
-        case .ch:
-            return "Chinese"
-        }
-    }
-}
-
-
 final class TranslateViewController: UIViewController {
+    enum `Type` {
+        case source
+        case target
+    }
+    
     private var sourceLanguage: Language = .ko
     private var targetLanguage: Language = .en
     
@@ -40,6 +24,7 @@ final class TranslateViewController: UIViewController {
         button.setTitleColor(.label, for: .normal)
         button.backgroundColor = .systemBackground
         button.layer.cornerRadius = 9.0
+        button.addTarget(self, action: #selector(didTapSourceLanguageButton), for: .touchUpInside)
         return button
     }()
     
@@ -50,6 +35,7 @@ final class TranslateViewController: UIViewController {
         button.setTitleColor(.label, for: .normal)
         button.backgroundColor = .systemBackground
         button.layer.cornerRadius = 9.0
+        button.addTarget(self, action: #selector(didTapTargetLanguageButton), for: .touchUpInside)
         return button
     }()
     
@@ -193,5 +179,35 @@ private extension TranslateViewController {
         let viewController = SourceTextViewController(delegate: self)
         
         present(viewController, animated: true, completion: nil)
+    }
+    
+    func didTapLanguageButton(type: Type) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        Language.allCases
+            .forEach { language in
+                let action = UIAlertAction(title: language.title, style: .default, handler: { [weak self] _ in
+                    switch type {
+                    case .source:
+                        self?.sourceLanguage = language
+                        self?.sourceLanguageButton.setTitle(language.title, for: .normal)
+                    case .target:
+                        self?.targetLanguage = language
+                        self?.targetLanguageButton.setTitle(language.title, for: .normal)
+                        
+                    }
+                })
+                alertController.addAction(action)
+            }
+        let cancelAction = UIAlertAction(title: "취소하기", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @objc func didTapSourceLanguageButton() {
+        didTapLanguageButton(type: .source)
+    }
+    
+    @objc func didTapTargetLanguageButton() {
+        didTapLanguageButton(type: .target)
     }
 }
