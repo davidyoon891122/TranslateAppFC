@@ -8,10 +8,34 @@
 import UIKit
 import SnapKit
 
+enum Language {
+    case ko
+    case en
+    case ja
+    case ch
+    
+    var title: String {
+        switch self {
+        case .ko:
+            return "Korean"
+        case .en:
+            return "English"
+        case .ja:
+            return "Japanese"
+        case .ch:
+            return "Chinese"
+        }
+    }
+}
+
+
 final class TranslateViewController: UIViewController {
+    private var sourceLanguage: Language = .ko
+    private var targetLanguage: Language = .en
+    
     private lazy var sourceLanguageButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Korean", for: .normal)
+        button.setTitle(sourceLanguage.title, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 15.0, weight: .semibold)
         button.setTitleColor(.label, for: .normal)
         button.backgroundColor = .systemBackground
@@ -21,7 +45,7 @@ final class TranslateViewController: UIViewController {
     
     private lazy var targetLanguageButton: UIButton = {
         let button = UIButton()
-        button.setTitle("English", for: .normal)
+        button.setTitle(targetLanguage.title, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 15.0, weight: .semibold)
         button.setTitleColor(.label, for: .normal)
         button.backgroundColor = .systemBackground
