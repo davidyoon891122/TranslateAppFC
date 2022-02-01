@@ -16,6 +16,7 @@
 		AD7112DF27A2C571004C27C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AD7112DE27A2C571004C27C6 /* Alamofire */; };
 		AD7112E227A2C7EA004C27C6 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112E127A2C7EA004C27C6 /* TranslateViewController.swift */; };
 		AD7112E427A2CB05004C27C6 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112E327A2CB05004C27C6 /* UIColor+.swift */; };
+		AD7112EC27A93159004C27C6 /* SourceTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112EB27A93159004C27C6 /* SourceTextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AD7112D427A2C4DF004C27C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7112E127A2C7EA004C27C6 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		AD7112E327A2CB05004C27C6 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		AD7112EB27A93159004C27C6 /* SourceTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,6 @@
 				AD7112C627A2C4DE004C27C6 /* AppDelegate.swift */,
 				AD7112C827A2C4DE004C27C6 /* SceneDelegate.swift */,
 				AD7112E327A2CB05004C27C6 /* UIColor+.swift */,
-				AD7112CA27A2C4DE004C27C6 /* TabBarwController.swift */,
 				AD7112CF27A2C4DF004C27C6 /* Assets.xcassets */,
 				AD7112D127A2C4DF004C27C6 /* LaunchScreen.storyboard */,
 				AD7112D427A2C4DF004C27C6 /* Info.plist */,
@@ -77,9 +78,19 @@
 		AD7112E027A2C7DD004C27C6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				AD7112E127A2C7EA004C27C6 /* TranslateViewController.swift */,
+				AD7112CA27A2C4DE004C27C6 /* TabBarwController.swift */,
+				AD7112ED27A93183004C27C6 /* Translate */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AD7112ED27A93183004C27C6 /* Translate */ = {
+			isa = PBXGroup;
+			children = (
+				AD7112E127A2C7EA004C27C6 /* TranslateViewController.swift */,
+				AD7112EB27A93159004C27C6 /* SourceTextViewController.swift */,
+			);
+			path = Translate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 			files = (
 				AD7112CB27A2C4DE004C27C6 /* TabBarwController.swift in Sources */,
 				AD7112E227A2C7EA004C27C6 /* TranslateViewController.swift in Sources */,
+				AD7112EC27A93159004C27C6 /* SourceTextViewController.swift in Sources */,
 				AD7112C727A2C4DE004C27C6 /* AppDelegate.swift in Sources */,
 				AD7112C927A2C4DE004C27C6 /* SceneDelegate.swift in Sources */,
 				AD7112E427A2CB05004C27C6 /* UIColor+.swift in Sources */,

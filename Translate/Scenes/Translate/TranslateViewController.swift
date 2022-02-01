@@ -73,6 +73,8 @@ final class TranslateViewController: UIViewController {
     private lazy var sourceLabelBaseView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemBackground
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapSourceLabelBaseView))
+        view.addGestureRecognizer(tapGesture)
         return view
     }()
     
@@ -91,6 +93,16 @@ final class TranslateViewController: UIViewController {
         addSubviews()
         setLayoutConstraint()
     }
+}
+
+
+extension TranslateViewController: SourceTextViewControllerDelegate {
+    func didEnterText(_ sourceText: String) {
+        if sourceText.isEmpty { return }
+        sourceLabel.text = sourceText
+        sourceLabel.textColor = .label
+    }
+    
 }
 
 private extension TranslateViewController {
@@ -151,5 +163,11 @@ private extension TranslateViewController {
             $0.trailing.equalTo(sourceLabelBaseView.snp.trailing).inset(24.0)
             $0.top.equalTo(sourceLabelBaseView.snp.top).inset(24.0)
         }
+    }
+    
+    @objc func didTapSourceLabelBaseView() {
+        let viewController = SourceTextViewController(delegate: self)
+        
+        present(viewController, animated: true, completion: nil)
     }
 }

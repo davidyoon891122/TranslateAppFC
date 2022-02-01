@@ -1,5 +1,5 @@
 //
-//  TabBarwController.swift
+//  TabBarController.swift
 //  Translate
 //
 //  Created by David Yoon on 2022/01/27.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TabBarwController: UITabBarController {
+final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
