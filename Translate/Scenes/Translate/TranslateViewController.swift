@@ -71,14 +71,43 @@ final class TranslateViewController: UIViewController {
     private lazy var bookmarkButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "bookmark"), for: .normal)
+        button.addTarget(self, action: #selector(didTapBookmarkButton), for: .touchUpInside)
         return button
     }()
+    
+    @objc func didTapBookmarkButton() {
+        guard let sourceText = sourceLabel.text,
+              let translatedText = resultLabel.text,
+              bookmarkButton.imageView?.image == UIImage(systemName: "bookmark")
+              else { return }
+        
+        bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+        
+        let currentBookmarks: [Bookmark] = UserDefaults.standard.bookmarks
+        let newBookmark = Bookmark(
+            sourceLanguage: sourceLanguage,
+            translateLanguage: targetLanguage,
+            sourceText: sourceText,
+            translatedText: translatedText
+        )
+        
+        UserDefaults.standard.bookmarks = [newBookmark] + currentBookmarks
+        print(UserDefaults.standard.bookmarks)
+        
+        
+        
+    }
     
     private lazy var copyButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "doc.on.doc"), for: .normal)
+        button.addTarget(self, action: #selector(didTapCopyButton), for: .touchUpInside)
         return button
     }()
+    
+    @objc func didTapCopyButton() {
+        UIPasteboard.general.string = resultLabel.text
+    }
     
     private lazy var sourceLabelBaseView: UIView = {
         let view = UIView()
@@ -91,7 +120,7 @@ final class TranslateViewController: UIViewController {
     private lazy var sourceLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 23.0, weight: .semibold)
-        label.textColor = .tertiaryLabel // TODO: sourceLabel의 입력값이 추가되면, placeholder 스타일 해제
+        label.textColor = .tertiaryLabel
         label.text = "텍스트 입력"
         label.numberOfLines = 0
         return label
@@ -111,6 +140,7 @@ extension TranslateViewController: SourceTextViewControllerDelegate {
         if sourceText.isEmpty { return }
         sourceLabel.text = sourceText
         sourceLabel.textColor = .label
+        bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
     }
     
 }

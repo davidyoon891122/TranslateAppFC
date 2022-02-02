@@ -18,6 +18,8 @@
 		AD7112E427A2CB05004C27C6 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112E327A2CB05004C27C6 /* UIColor+.swift */; };
 		AD7112EC27A93159004C27C6 /* SourceTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112EB27A93159004C27C6 /* SourceTextViewController.swift */; };
 		AD7112EF27A93EC5004C27C6 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112EE27A93EC5004C27C6 /* Language.swift */; };
+		AD7112F127AAAEA6004C27C6 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112F027AAAEA6004C27C6 /* Bookmark.swift */; };
+		AD7112F327AAB064004C27C6 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112F227AAB064004C27C6 /* UserDefaults+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		AD7112E327A2CB05004C27C6 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		AD7112EB27A93159004C27C6 /* SourceTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTextViewController.swift; sourceTree = "<group>"; };
 		AD7112EE27A93EC5004C27C6 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		AD7112F027AAAEA6004C27C6 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		AD7112F227AAB064004C27C6 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +73,12 @@
 				AD7112E027A2C7DD004C27C6 /* Scenes */,
 				AD7112C627A2C4DE004C27C6 /* AppDelegate.swift */,
 				AD7112C827A2C4DE004C27C6 /* SceneDelegate.swift */,
-				AD7112E327A2CB05004C27C6 /* UIColor+.swift */,
+				AD7112F427AAB287004C27C6 /* Extension */,
 				AD7112CF27A2C4DF004C27C6 /* Assets.xcassets */,
 				AD7112D127A2C4DF004C27C6 /* LaunchScreen.storyboard */,
 				AD7112D427A2C4DF004C27C6 /* Info.plist */,
 				AD7112EE27A93EC5004C27C6 /* Language.swift */,
+				AD7112F027AAAEA6004C27C6 /* Bookmark.swift */,
 			);
 			path = Translate;
 			sourceTree = "<group>";
@@ -94,6 +99,15 @@
 				AD7112EB27A93159004C27C6 /* SourceTextViewController.swift */,
 			);
 			path = Translate;
+			sourceTree = "<group>";
+		};
+		AD7112F427AAB287004C27C6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AD7112E327A2CB05004C27C6 /* UIColor+.swift */,
+				AD7112F227AAB064004C27C6 /* UserDefaults+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,12 +188,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7112CB27A2C4DE004C27C6 /* TabBarwController.swift in Sources */,
+				AD7112F327AAB064004C27C6 /* UserDefaults+.swift in Sources */,
 				AD7112E227A2C7EA004C27C6 /* TranslateViewController.swift in Sources */,
 				AD7112EC27A93159004C27C6 /* SourceTextViewController.swift in Sources */,
 				AD7112EF27A93EC5004C27C6 /* Language.swift in Sources */,
 				AD7112C727A2C4DE004C27C6 /* AppDelegate.swift in Sources */,
 				AD7112C927A2C4DE004C27C6 /* SceneDelegate.swift in Sources */,
 				AD7112E427A2CB05004C27C6 /* UIColor+.swift in Sources */,
+				AD7112F127AAAEA6004C27C6 /* Bookmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
