@@ -20,6 +20,10 @@
 		AD7112EF27A93EC5004C27C6 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112EE27A93EC5004C27C6 /* Language.swift */; };
 		AD7112F127AAAEA6004C27C6 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112F027AAAEA6004C27C6 /* Bookmark.swift */; };
 		AD7112F327AAB064004C27C6 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112F227AAB064004C27C6 /* UserDefaults+.swift */; };
+		AD7112F727AAB620004C27C6 /* BookmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112F627AAB620004C27C6 /* BookmarkListViewController.swift */; };
+		AD7112F927AAC03F004C27C6 /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112F827AAC03F004C27C6 /* BookmarkCollectionViewCell.swift */; };
+		AD7112FB27AAC2AB004C27C6 /* BookmarkTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112FA27AAC2AB004C27C6 /* BookmarkTextStackView.swift */; };
+		AD7112FD27AAC404004C27C6 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112FC27AAC404004C27C6 /* Type.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		AD7112EE27A93EC5004C27C6 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		AD7112F027AAAEA6004C27C6 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		AD7112F227AAB064004C27C6 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
+		AD7112F627AAB620004C27C6 /* BookmarkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListViewController.swift; sourceTree = "<group>"; };
+		AD7112F827AAC03F004C27C6 /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
+		AD7112FA27AAC2AB004C27C6 /* BookmarkTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTextStackView.swift; sourceTree = "<group>"; };
+		AD7112FC27AAC404004C27C6 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 		AD7112C527A2C4DE004C27C6 /* Translate */ = {
 			isa = PBXGroup;
 			children = (
+				AD7112FE27AAC4D4004C27C6 /* Models */,
 				AD7112E027A2C7DD004C27C6 /* Scenes */,
 				AD7112C627A2C4DE004C27C6 /* AppDelegate.swift */,
 				AD7112C827A2C4DE004C27C6 /* SceneDelegate.swift */,
@@ -77,8 +86,6 @@
 				AD7112CF27A2C4DF004C27C6 /* Assets.xcassets */,
 				AD7112D127A2C4DF004C27C6 /* LaunchScreen.storyboard */,
 				AD7112D427A2C4DF004C27C6 /* Info.plist */,
-				AD7112EE27A93EC5004C27C6 /* Language.swift */,
-				AD7112F027AAAEA6004C27C6 /* Bookmark.swift */,
 			);
 			path = Translate;
 			sourceTree = "<group>";
@@ -87,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				AD7112CA27A2C4DE004C27C6 /* TabBarwController.swift */,
+				AD7112F527AAB612004C27C6 /* Bookmark */,
 				AD7112ED27A93183004C27C6 /* Translate */,
 			);
 			path = Scenes;
@@ -108,6 +116,26 @@
 				AD7112F227AAB064004C27C6 /* UserDefaults+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		AD7112F527AAB612004C27C6 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				AD7112F627AAB620004C27C6 /* BookmarkListViewController.swift */,
+				AD7112F827AAC03F004C27C6 /* BookmarkCollectionViewCell.swift */,
+				AD7112FA27AAC2AB004C27C6 /* BookmarkTextStackView.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		AD7112FE27AAC4D4004C27C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD7112EE27A93EC5004C27C6 /* Language.swift */,
+				AD7112F027AAAEA6004C27C6 /* Bookmark.swift */,
+				AD7112FC27AAC404004C27C6 /* Type.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,11 +219,15 @@
 				AD7112F327AAB064004C27C6 /* UserDefaults+.swift in Sources */,
 				AD7112E227A2C7EA004C27C6 /* TranslateViewController.swift in Sources */,
 				AD7112EC27A93159004C27C6 /* SourceTextViewController.swift in Sources */,
+				AD7112F727AAB620004C27C6 /* BookmarkListViewController.swift in Sources */,
 				AD7112EF27A93EC5004C27C6 /* Language.swift in Sources */,
 				AD7112C727A2C4DE004C27C6 /* AppDelegate.swift in Sources */,
+				AD7112FD27AAC404004C27C6 /* Type.swift in Sources */,
 				AD7112C927A2C4DE004C27C6 /* SceneDelegate.swift in Sources */,
 				AD7112E427A2CB05004C27C6 /* UIColor+.swift in Sources */,
 				AD7112F127AAAEA6004C27C6 /* Bookmark.swift in Sources */,
+				AD7112FB27AAC2AB004C27C6 /* BookmarkTextStackView.swift in Sources */,
+				AD7112F927AAC03F004C27C6 /* BookmarkCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
