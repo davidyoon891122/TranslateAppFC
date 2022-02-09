@@ -22,7 +22,7 @@ final class TabBarController: UITabBarController {
         let translateViewController = TranslateViewController()
         
         translateViewController.tabBarItem = UITabBarItem(
-            title: "Translate",
+            title: NSLocalizedString("Translate", comment: ""),
             image: UIImage(systemName: "mic"),
             selectedImage:  UIImage(systemName: "mic.fill")
         )
@@ -30,7 +30,7 @@ final class TabBarController: UITabBarController {
         let bookmarkViewController = UINavigationController(rootViewController: BookmarkListViewController())
         
         bookmarkViewController.tabBarItem = UITabBarItem(
-            title: "Bookmark",
+            title: NSLocalizedString("Bookmark", comment: ""),
             image:  UIImage(systemName: "star"),
             selectedImage:  UIImage(systemName: "star.fill")
         )
