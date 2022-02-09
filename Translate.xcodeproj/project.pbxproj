@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD1D491327B3F5C200425FC0 /* API-KEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D491227B3F5C200425FC0 /* API-KEY.swift */; };
 		AD7112C727A2C4DE004C27C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112C627A2C4DE004C27C6 /* AppDelegate.swift */; };
 		AD7112C927A2C4DE004C27C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112C827A2C4DE004C27C6 /* SceneDelegate.swift */; };
 		AD7112CB27A2C4DE004C27C6 /* TabBarwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112CA27A2C4DE004C27C6 /* TabBarwController.swift */; };
@@ -24,9 +25,13 @@
 		AD7112F927AAC03F004C27C6 /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112F827AAC03F004C27C6 /* BookmarkCollectionViewCell.swift */; };
 		AD7112FB27AAC2AB004C27C6 /* BookmarkTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112FA27AAC2AB004C27C6 /* BookmarkTextStackView.swift */; };
 		AD7112FD27AAC404004C27C6 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7112FC27AAC404004C27C6 /* Type.swift */; };
+		AD7AE07D27B3EF9900C004F9 /* TranslateRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7AE07C27B3EF9900C004F9 /* TranslateRequestModel.swift */; };
+		AD7AE07F27B3EFDE00C004F9 /* TranslateResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7AE07E27B3EFDE00C004F9 /* TranslateResponseModel.swift */; };
+		AD7AE08127B3F0A100C004F9 /* TranslatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7AE08027B3F0A100C004F9 /* TranslatorManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD1D491227B3F5C200425FC0 /* API-KEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API-KEY.swift"; sourceTree = "<group>"; };
 		AD7112C327A2C4DE004C27C6 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7112C627A2C4DE004C27C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD7112C827A2C4DE004C27C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +49,9 @@
 		AD7112F827AAC03F004C27C6 /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD7112FA27AAC2AB004C27C6 /* BookmarkTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTextStackView.swift; sourceTree = "<group>"; };
 		AD7112FC27AAC404004C27C6 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		AD7AE07C27B3EF9900C004F9 /* TranslateRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRequestModel.swift; sourceTree = "<group>"; };
+		AD7AE07E27B3EFDE00C004F9 /* TranslateResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResponseModel.swift; sourceTree = "<group>"; };
+		AD7AE08027B3F0A100C004F9 /* TranslatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +87,11 @@
 			isa = PBXGroup;
 			children = (
 				AD7112FE27AAC4D4004C27C6 /* Models */,
+				AD7AE08227B3F0AC00C004F9 /* Managers */,
 				AD7112E027A2C7DD004C27C6 /* Scenes */,
+				AD7112F427AAB287004C27C6 /* Extension */,
 				AD7112C627A2C4DE004C27C6 /* AppDelegate.swift */,
 				AD7112C827A2C4DE004C27C6 /* SceneDelegate.swift */,
-				AD7112F427AAB287004C27C6 /* Extension */,
 				AD7112CF27A2C4DF004C27C6 /* Assets.xcassets */,
 				AD7112D127A2C4DF004C27C6 /* LaunchScreen.storyboard */,
 				AD7112D427A2C4DF004C27C6 /* Info.plist */,
@@ -134,8 +143,19 @@
 				AD7112EE27A93EC5004C27C6 /* Language.swift */,
 				AD7112F027AAAEA6004C27C6 /* Bookmark.swift */,
 				AD7112FC27AAC404004C27C6 /* Type.swift */,
+				AD7AE07C27B3EF9900C004F9 /* TranslateRequestModel.swift */,
+				AD7AE07E27B3EFDE00C004F9 /* TranslateResponseModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AD7AE08227B3F0AC00C004F9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AD7AE08027B3F0A100C004F9 /* TranslatorManager.swift */,
+				AD1D491227B3F5C200425FC0 /* API-KEY.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,9 +237,12 @@
 			files = (
 				AD7112CB27A2C4DE004C27C6 /* TabBarwController.swift in Sources */,
 				AD7112F327AAB064004C27C6 /* UserDefaults+.swift in Sources */,
+				AD7AE07D27B3EF9900C004F9 /* TranslateRequestModel.swift in Sources */,
 				AD7112E227A2C7EA004C27C6 /* TranslateViewController.swift in Sources */,
 				AD7112EC27A93159004C27C6 /* SourceTextViewController.swift in Sources */,
 				AD7112F727AAB620004C27C6 /* BookmarkListViewController.swift in Sources */,
+				AD7AE07F27B3EFDE00C004F9 /* TranslateResponseModel.swift in Sources */,
+				AD7AE08127B3F0A100C004F9 /* TranslatorManager.swift in Sources */,
 				AD7112EF27A93EC5004C27C6 /* Language.swift in Sources */,
 				AD7112C727A2C4DE004C27C6 /* AppDelegate.swift in Sources */,
 				AD7112FD27AAC404004C27C6 /* Type.swift in Sources */,
@@ -227,6 +250,7 @@
 				AD7112E427A2CB05004C27C6 /* UIColor+.swift in Sources */,
 				AD7112F127AAAEA6004C27C6 /* Bookmark.swift in Sources */,
 				AD7112FB27AAC2AB004C27C6 /* BookmarkTextStackView.swift in Sources */,
+				AD1D491327B3F5C200425FC0 /* API-KEY.swift in Sources */,
 				AD7112F927AAC03F004C27C6 /* BookmarkCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

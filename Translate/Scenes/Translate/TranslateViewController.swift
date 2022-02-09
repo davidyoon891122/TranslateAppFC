@@ -126,6 +126,11 @@ final class TranslateViewController: UIViewController {
         view.backgroundColor = .secondarySystemBackground
         addSubviews()
         setLayoutConstraint()
+        
+        TranlatorManager().translate(from: "안녕하세요") { result in
+            print("😀\(result)")
+        }
+        
     }
 }
 
